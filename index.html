@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Game World</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #10152b;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 { color: #ffd166; }
+    .games {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    button {
+      padding: 22px 8px;
+      border: 0;
+      border-radius: 15px;
+      font-size: 17px;
+      font-weight: bold;
+      background: #263b67;
+      color: white;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 23px;
+      color: #ffd166;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎮 My Game World</h1>
+  <p>તમારી મનપસંદ ગેમ પસંદ કરો!</p>
+
+  <div class="games">
+    <button onclick="play('ટિક ટેક ટો')">❌⭕ Tic Tac Toe</button>
+    <button onclick="play('નંબર ગેસિંગ')">🔢 Number Game</button>
+    <button onclick="play('રોક પેપર સિઝર')">✊ Rock Paper Scissors</button>
+    <button onclick="play('મેમરી ગેમ')">🧠 Memory Game</button>
+  </div>
+
+  <div id="result">ગેમ પસંદ કરો 👆</div>
+
+  <script>
+    function play(game) {
+      document.getElementById("result").innerText =
+        game + " ગેમ જલ્દી આવી રહી છે!";
+    }
+  </script>
+</body>
+</html>
